@@ -8,7 +8,7 @@
     <!-- Login Fragment -->
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.vacancyapp.LoginFragment"
+        android:name="com.example.vacancyapp.feature_auth.LoginFragment"
         android:label="Login"
         tools:layout="@layout/fragment_login">
         <action
@@ -22,7 +22,7 @@
     <!-- Password Fragment (добавлен вместо VerificationFragment) -->
     <fragment
         android:id="@+id/passwordFragment"
-        android:name="com.example.vacancyapp.PasswordFragment"
+        android:name="com.example.vacancyapp.feature_auth.PasswordFragment"
         android:label="Password"
         tools:layout="@layout/fragment_password">
         <action
@@ -35,7 +35,7 @@
     <!-- Search Fragment -->
     <fragment
         android:id="@+id/searchFragment"
-        android:name="com.example.vacancyapp.SearchFragment"
+        android:name="com.example.vacancyapp.feature_search.SearchFragment"
         android:label="Search"
         tools:layout="@layout/fragment_search">
         <action
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/vacancyFragment"
-        android:name="com.example.vacancyapp.VacancyFragment"
+        android:name="com.example.vacancyapp.feature_vacancies.VacancyFragment"
         android:label="Vacancy"
         tools:layout="@layout/fragment_vacancy">
         <argument
@@ -68,7 +68,7 @@
 
     <fragment
         android:id="@+id/favoritesFragment"
-        android:name="com.example.vacancyapp.FavoritesFragment"
+        android:name="com.example.vacancyapp.feature_favorites.FavoritesFragment"
         android:label="Favorites"
         tools:layout="@layout/fragment_favorites">
         <action
@@ -82,19 +82,19 @@
 
     <fragment
         android:id="@+id/responsesFragment"
-        android:name="com.example.vacancyapp.EmptyFragment"
+        android:name="com.example.vacancyapp.core_ui.EmptyFragment"
         android:label="Responses"
         tools:layout="@layout/fragment_empty" />
 
     <fragment
         android:id="@+id/messagesFragment"
-        android:name="com.example.vacancyapp.EmptyFragment"
+        android:name="com.example.vacancyapp.core_ui.EmptyFragment"
         android:label="Messages"
         tools:layout="@layout/fragment_empty" />
 
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.vacancyapp.EmptyFragment"
+        android:name="com.example.vacancyapp.core_ui.EmptyFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_empty" />
 

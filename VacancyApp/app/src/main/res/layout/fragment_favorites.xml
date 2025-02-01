@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="7dp"
     android:background="@color/black"
-    tools:context=".FavoritesFragment">
+    tools:context=".feature_favorites.FavoritesFragment">
 
     <!-- Заголовок "Избранное" -->
     <TextView

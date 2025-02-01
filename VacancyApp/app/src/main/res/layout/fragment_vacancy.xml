@@ -7,7 +7,7 @@
     android:paddingTop="15dp"
     android:paddingBottom="80dp"
     android:scrollbars="none"
-    tools:context=".VacancyFragment">
+    tools:context=".feature_vacancies.VacancyFragment">
 
     <LinearLayout
         android:layout_width="match_parent"

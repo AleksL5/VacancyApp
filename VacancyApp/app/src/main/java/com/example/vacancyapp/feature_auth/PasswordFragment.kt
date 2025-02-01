@@ -1,17 +1,14 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.feature_auth
 
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.text.Editable
 import android.text.TextWatcher
-import android.view.KeyEvent
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.EditText
 import androidx.navigation.fragment.findNavController
+import com.example.vacancyapp.R
 import com.example.vacancyapp.databinding.FragmentPasswordBinding
-import com.google.android.material.button.MaterialButton
 
 class PasswordFragment : Fragment(R.layout.fragment_password) {
 

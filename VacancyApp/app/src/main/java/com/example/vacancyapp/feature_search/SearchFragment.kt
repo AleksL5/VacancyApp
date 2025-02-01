@@ -1,17 +1,18 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.feature_search
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.vacancyapp.feature_vacancies.RecommendationsAdapter
+import com.example.vacancyapp.feature_vacancies.VacanciesAdapter
+import com.example.vacancyapp.core_data.ViewModel
+import com.example.vacancyapp.app.MenuStateUpdater
 import com.example.vacancyapp.databinding.FragmentSearchBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class SearchFragment : Fragment() {
 

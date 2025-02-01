@@ -1,4 +1,4 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.core_data
 
 data class Vacancy(
     val id: String,

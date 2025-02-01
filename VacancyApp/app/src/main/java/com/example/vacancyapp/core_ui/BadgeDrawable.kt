@@ -1,4 +1,4 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.core_ui
 
 import android.content.Context
 import android.graphics.Canvas

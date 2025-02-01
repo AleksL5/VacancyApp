@@ -1,4 +1,4 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.feature_vacancies
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
+import com.example.vacancyapp.R
+import com.example.vacancyapp.core_data.Vacancy
+import com.example.vacancyapp.core_data.ViewModel
+import com.example.vacancyapp.app.MenuStateUpdater
 import com.example.vacancyapp.databinding.FragmentVacancyBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -21,7 +25,6 @@ import org.osmdroid.views.overlay.Marker
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONArray
-import org.json.JSONObject
 
 class VacancyFragment : Fragment() {
 

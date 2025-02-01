@@ -1,4 +1,4 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.core_data
 
 import android.app.Application
 import android.util.Log

@@ -1,15 +1,14 @@
-package com.example.vacancyapp
+package com.example.vacancyapp.feature_vacancies
 
 
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.vacancyapp.R
+import com.example.vacancyapp.core_data.Recommendation
 import com.example.vacancyapp.databinding.ItemRecommendationBinding
 
 
