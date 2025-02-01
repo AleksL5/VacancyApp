@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.vacancyapp.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+
+    <!-- Password Fragment (добавлен вместо VerificationFragment) -->
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.example.vacancyapp.PasswordFragment"
+        android:label="Password"
+        tools:layout="@layout/fragment_password">
+        <action
+            android:id="@+id/action_passwordFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Search Fragment -->
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.vacancyapp.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_vacancyFragment"
+            app:destination="@id/vacancyFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/vacancyFragment"
+        android:name="com.example.vacancyapp.VacancyFragment"
+        android:label="Vacancy"
+        tools:layout="@layout/fragment_vacancy">
+        <argument
+            android:name="vacancyId"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_vacancyFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:popUpTo="@id/searchFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_vacancyFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.example.vacancyapp.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoritesFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/actionFavoritesFragmentToVacancyFragment"
+            app:destination="@id/vacancyFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/responsesFragment"
+        android:name="com.example.vacancyapp.EmptyFragment"
+        android:label="Responses"
+        tools:layout="@layout/fragment_empty" />
+
+    <fragment
+        android:id="@+id/messagesFragment"
+        android:name="com.example.vacancyapp.EmptyFragment"
+        android:label="Messages"
+        tools:layout="@layout/fragment_empty" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.vacancyapp.EmptyFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_empty" />
+
+</navigation>

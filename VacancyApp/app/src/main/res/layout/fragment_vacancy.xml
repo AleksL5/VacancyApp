@@ -1,0 +1,267 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingTop="15dp"
+    android:paddingBottom="80dp"
+    android:scrollbars="none"
+    tools:context=".VacancyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+
+        <!-- Job Title and Salary -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="#1E1E1E"
+            android:clipToPadding="false"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/btnBack"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Назад"
+                    android:src="@drawable/ic_arrow_left"
+                    app:tint="#FFFFFF" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+
+                <ImageView
+                    android:id="@+id/btnView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Просмотр"
+                    android:src="@drawable/ic_eye"
+                    app:tint="#FFFFFF" />
+
+
+                <ImageView
+                    android:id="@+id/btnShare"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="Поделиться"
+                    android:src="@drawable/ic_share"
+                    app:tint="#FFFFFF" />
+
+
+                <ImageView
+                    android:id="@+id/iv_favorite"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:contentDescription="Избранное"
+                    android:src="@drawable/ic_favorites_inactive"
+                    app:tint="#FFFFFF" />
+
+            </LinearLayout>
+
+
+            <!-- Job Title -->
+            <TextView
+                android:id="@+id/tvJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium"
+                android:text="UI/UX Designer"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <!-- Salary -->
+            <TextView
+                android:id="@+id/tvSalary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Уровень дохода: не указан"
+                android:textColor="#A3A3A3"
+                android:textSize="16sp" />
+
+            <!-- Schedule -->
+            <TextView
+                android:id="@+id/tvSchedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:text="Полная занятость, полный день"
+                android:textColor="#A3A3A3"
+                android:textSize="14sp" />
+
+            <!-- Experience -->
+            <TextView
+                android:id="@+id/tvExperience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Требуемый опыт: от 1 года до 3 лет"
+                android:textColor="#A3A3A3"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Stats -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="horizontal">
+
+            <!-- Applied People -->
+            <TextView
+                android:id="@+id/tvViewingNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="#00B050"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="147 человек уже откликнулись"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+
+            <!-- Watching Now -->
+            <TextView
+                android:id="@+id/tvLookingNow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#00B050"
+                android:gravity="center"
+                android:padding="12dp"
+                android:text="2 человека сейчас смотрят"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Location Block -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#1E1E1E"
+            android:clipToPadding="false"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Название компании -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvCompany"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="Мобирикс"
+                    android:textColor="#FFFFFF"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/ivVerified"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_verified" />
+            </LinearLayout>
+
+            <!-- Локация -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ivLocationIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_near_vacancies"
+                    app:tint="#FFFFFF" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Минск, улица Березовая, 4/5"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Карта OpenStreetMap -->
+            <org.osmdroid.views.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Company Info -->
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#1E1E1E"
+            android:elevation="4dp"
+            android:lineSpacingExtra="4dp"
+            android:padding="12dp"
+            android:text="MOBYRIK – динамично развивающаяся компания..."
+            android:textColor="#A3A3A3"
+            android:textSize="14sp" />
+
+        <!-- Responsibilities -->
+        <TextView
+            android:id="@+id/tvResponsibilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="#1E1E1E"
+            android:elevation="4dp"
+            android:lineSpacingExtra="4dp"
+            android:padding="12dp"
+            android:text="Ваши задачи:\n- Проектировать пользовательский опыт...\n- Разрабатывать адаптивный дизайн интерфейсов..."
+            android:textColor="#A3A3A3"
+            android:textSize="14sp" />
+
+        <!-- Action Button -->
+        <Button
+            android:id="@+id/btnApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#00B050"
+            android:elevation="4dp"
+            android:text="Откликнуться"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

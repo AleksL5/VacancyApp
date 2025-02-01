@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Vacancy</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_hint">  Должность, ключевые слова</string>
+
+    <!-- Заголовок списка вакансий -->
+    <string name="jobs_for_you">Вакансии для вас</string>
+
+    <!-- Текст кнопки "Еще вакансии" -->
+    <string name="show_more_vacancies">Еще 143 вакансии</string>
+
+    <!-- Примеры данных вакансий -->
+    <string name="currently_viewed">Сейчас просматривает %1$d человек</string>
+    <string name="uiux_designer">UI/UX Designer</string>
+    <string name="minsk">Минск</string>
+    <string name="mobirik">Мобирикс</string>
+    <string name="experience">Опыт от 1 года до 3 лет</string>
+    <string name="published_date">Опубликовано %1$s</string>
+    <string name="disconnect">Откликнуться</string>
+    <string name="designer_vacancy">Дизайнер для маркетплейсов</string>
+    <string name="wildberries">Wildberries, Ozon</string>
+    <string name="salary">1500-2900 Br</string>
+</resources>

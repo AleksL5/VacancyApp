@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/favorites_button_selector.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Состояние active -->
+    <item android:state_selected="true" android:drawable="@drawable/ic_favorites_active" />
+    <!-- Состояние inactive_with_badge -->
+    <item android:state_checked="true" android:drawable="@drawable/ic_favorites_inactive_with_badge" />
+    <!-- Состояние inactive -->
+    <item android:drawable="@drawable/ic_favorites_inactive" />
+</selector>

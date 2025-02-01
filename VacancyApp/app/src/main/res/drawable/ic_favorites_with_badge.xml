@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Слой основного значка -->
+    <item android:id="@+id/icon_layer">
+        <bitmap
+            android:src="@drawable/ic_favorites_inactive"
+            android:gravity="center" />
+    </item>
+
+    <!-- Слой с кружком для числа -->
+    <item
+        android:id="@+id/badge_layer"
+        android:right="8dp"
+        android:top="8dp">
+        <shape
+            android:shape="oval">
+            <solid android:color="@android:color/holo_red_dark" />
+            <size
+                android:width="16dp"
+                android:height="16dp" />
+        </shape>
+    </item>
+</layer-list>

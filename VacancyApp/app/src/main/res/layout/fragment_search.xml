@@ -1,0 +1,151 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:paddingTop="40dp"
+    tools:context=".SearchFragment">
+
+    <LinearLayout
+        android:id="@+id/search_container"
+        android:layout_width="295dp"
+        android:layout_height="49dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg_rounded_gray"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search_inactive"
+            android:visibility="visible"
+            app:tint="#858688" />
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Назад"
+            android:src="@drawable/ic_arrow_left"
+            android:visibility="gone"
+            app:tint="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/search_field"
+            android:layout_width="255dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="@string/search_hint"
+            android:inputType="text"
+            android:paddingStart="8dp"
+            android:paddingTop="5dp"
+            android:textColor="#DBDBDB"
+            android:textColorHint="#858688"
+            android:textSize="14dp" />
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/filter_button"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/bg_rounded_gray"
+        android:src="@drawable/ic_filter_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/search_container" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recommendations_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin ="14dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.180"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_container"
+        tools:listitem="@layout/item_recommendation" />
+
+
+    <TextView
+        android:id="@+id/jobs_for_you_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/jobs_for_you"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recommendations_list" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/vacancies_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:paddingTop="10dp"
+        app:layout_constraintBottom_toTopOf="@id/show_more_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/jobs_for_you_title"
+        tools:listitem="@layout/item_vacancy" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/show_more_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:backgroundTint="#007BFF"
+        android:text="@string/show_more_vacancies"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        style="@style/CustomButtonStyle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vacancies_list" />
+
+    <TextView
+        android:id="@+id/total_vacancies_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Число вакансий"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_container" />
+
+    <TextView
+        android:id="@+id/sort_vacancies_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="По соответствию "
+        android:drawableEnd="@drawable/ic_sort"
+        android:textColor="#2B7EFE"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_container" />
+</androidx.constraintlayout.widget.ConstraintLayout>

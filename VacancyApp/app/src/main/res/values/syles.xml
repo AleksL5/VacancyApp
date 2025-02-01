@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CustomButtonStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">#007BFF</item>
+        <item name="rippleColor">#007BFF</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    <style name="CodeInputStyle">
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/bg_code_input</item>
+        <item name="android:gravity">center</item>
+        <item name="android:inputType">number</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:maxLength">1</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:layout_marginStart">8dp</item>
+    </style>
+
+</resources>
